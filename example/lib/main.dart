@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:rounded_loading_button/rounded_loading_button.dart';
+import 'package:rounded_loading_button_plus/rounded_loading_button_plus.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,11 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
     _btnController1.stateStream.listen((value) {
       print(value);
-
     });
   }
 
@@ -114,8 +113,8 @@ Tap me i have a huge text''', style: TextStyle(color: Colors.white)),
                       borderRadius: BorderRadius.circular(30))),
                 ),
                 onPressed: () {
-                  // _btnController1.success();
-                  // _btnController2.success();
+                  _btnController1.success();
+                  _btnController2.success();
                   // _btnController1
                   print(_btnController1.currentState);
                 },
